@@ -1,0 +1,49 @@
+﻿{
+    "$schema": "/App_Plugins/manifestSchema.json",
+
+  "propertyEditors": [
+    {
+      "alias": "Our.Umbraco.ImageColorPicker",
+      "name": "Image Color Picker",
+      "icon": "icon-colorpicker",
+      "group": "pickers",
+      "editor": {
+        "view": "~/App_Plugins/our.umbraco.imagecolorpicker/ImageColorPicker.html"
+      },
+      "prevalues": {
+        "fields": [
+          {
+            "label": "Alias of media picker",
+            "description": "Enter the alias of the media picker property on the same doc type",
+            "key": "mediaPickerAlias",
+            "view": "textstring"
+          },
+          {
+            "label": "Media item",
+            "key": "pickedImage",
+            "view": "imagepicker"
+          },
+          {
+            "label": "Width",
+            "description": "Default width 300px",
+            "key": "width",
+            "view": "number"
+          },
+          {
+            "label": "Height",
+            "description": "Default height 300px",
+            "key": "height",
+            "view": "number"
+          }
+
+        ]
+      }
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/our.umbraco.imagecolorpicker/ImageColorPicker.Controller.js"
+  ],
+  "css": [
+    "~/App_Plugins/our.umbraco.imagecolorpicker/ImageColorPicker.css"
+  ]
+}

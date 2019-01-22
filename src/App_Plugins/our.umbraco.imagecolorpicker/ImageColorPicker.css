@@ -1,0 +1,50 @@
+﻿
+#icpImageCanvas {
+    border: 3px solid #f3f3f5;
+    z-index:1;
+}
+
+#icpImageCanvas:hover{
+    cursor: crosshair;
+}
+
+
+.icpSelected{
+    display:flex;
+    margin-bottom:.5rem;
+}
+
+.icpSelectedInfo{
+    margin-left:1rem;
+    display:flex;
+    align-items:center;
+}
+
+.icpSelectedInfo p{
+    margin:0;
+}
+
+.icpSwatch{
+    width: 50px;
+    height: 50px;
+    border: 3px solid #f3f3f5;
+    border-radius:5px;
+}
+
+
+.icpCanvasWrapper{
+    position:relative;
+}
+
+.icpRollOverSwatch {
+    position: absolute;
+    display:none;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f5;
+    border-radius:5px;
+    margin-right: .5rem;
+    z-index:1000;
+}

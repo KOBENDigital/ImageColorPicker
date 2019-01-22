@@ -1,0 +1,25 @@
+﻿<div ng-controller="imagecolorpicker.controller">
+    
+
+        <div class="icpSelected">
+            <div class="icpSwatch" ng-style="swatchStyle">
+            </div>
+            <div class="icpSelectedInfo">
+                <p><strong>Selected color:</strong> <br />
+                <span ng-bind="swatchStyle.background"></span>
+                </p>
+
+            </div>
+        </div>
+
+
+    <div class="icpCanvasWrapper">
+        <div class="icpRollOverSwatch" ng-style="hoverSwatchStyle">
+        </div>
+        <canvas id="icpImageCanvas">
+            Your user agent does not support the HTML5 Canvas element.
+        </canvas>
+
+    </div>
+
+</div>
