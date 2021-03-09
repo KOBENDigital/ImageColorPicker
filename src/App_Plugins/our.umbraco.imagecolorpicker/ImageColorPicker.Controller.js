@@ -22,7 +22,19 @@
   $scope.getMediaId = function (alias) {
 
     if (editorState.current) {
-      var tabs = editorState.current.tabs;
+      var tabs = [];
+      
+      if(editorState.current.variants) {
+        // V8 tabs from active variant
+        tabs = _.find(editorState.current.variants, function(v) {
+                  return v.active;
+                }).tabs; 
+      }
+      else {
+        // V7
+        tabs = editorState.current.tabs;
+      }
+      
       var id = null;
       var prop = null;
 
@@ -57,7 +69,7 @@
         var image = new Image();
         image.src = $scope.imageSrc;
 
-        $(image).load(function () {
+        $(image).on('load', function () {
 
           //set the height either from configuration or defaults
           if ($scope.model.config.width && $scope.model.config.height) {
